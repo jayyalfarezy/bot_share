@@ -20,8 +20,10 @@ def menu():
 		token = open("token.txt","r").read()
 		cok = open("cookie.txt","r").read()
 		cookie = {"cookie":cok}
+		nama = ses.get(f"https://graph.facebook.com/me?fields=name&access_token={token}",cookies=cookie).json()["name"]
 	except:
 		login()
+	print(f" selamat datang {nama}, silahkan pakai sesuka hati")
 	idt = input(" masukan link : ")
 	limit = int(input(" masukan limit : "))
 	try:
