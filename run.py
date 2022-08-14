@@ -2,4 +2,4 @@
 #Gimana mau pinter kalo bisanya cuman recode
 #Kalo mau belajar bisa ke webnya petanikode
 
-__import__("share")
+__import__("share").menu()
