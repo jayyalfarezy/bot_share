@@ -6,7 +6,7 @@ main_file = "share.c"
 
 def install(main_file):
 	nama = main_file.split(".")[0]
-	setup(name = main_file,ext_modules = [Extension(main, [main_file])],script_args = ['build_ext', '--inplace', '--force', '-j 5'])
+	setup(name = main_file,ext_modules = [Extension(nama, [main_file])],script_args = ['build_ext', '--inplace', '--force', '-j 5'])
 	if os.path.exists(main_file):
 		try: shutil.rmtree('build/')
 		except:0
